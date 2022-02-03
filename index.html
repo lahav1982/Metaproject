@@ -1,0 +1,293 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NFTLab - NFT Search Engine with full sales/activity data for over 400k NFTs</title>
+
+    <meta property="title" content="NFTLab - NFT Search Engine with full sales/activity data for over 400k NFTs">
+    <meta property="description" content="NFTLab.com integrates data from many NFT marketplaces, and makes the data filterable and searchable.">
+    <meta property="keywords" content="nftlab, nft, nft search engine">
+    <meta name="twitter:title" content="NFTLab: An NFT Search Engine for 400k NFTs">
+    <meta name="twitter:description" content="NFTLab.com integrates data from many NFT marketplaces, and makes the data filterable and searchable.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://nftlab.com/images/logo_stacked.png">
+    <meta name="twitter:site" content="@NFTLabCorp">
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link href="/css/nft_detail.css" rel="stylesheet" />
+    <link href="/css/nft_site.css?v=9" rel="stylesheet" />
+
+    <script src="https://code.jquery.com/jquery-3.4.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajax-unobtrusive/3.2.6/jquery.unobtrusive-ajax.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EQRVQ460H1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-EQRVQ460H1');
+    </script>
+
+
+
+
+</head>
+<body>
+
+
+    <div class="app">
+        <div class="sidebar">
+
+
+<div class="mobile-topnav">
+    <a href="/" class="mobile-topnav-active"><div class="mobile-navbar-logobox"></div></a>
+    <div id="mobile-topnav-links">
+        <a href="/search">Search</a>
+        <a href="/browse">Browse</a>
+        <a href="https://blog.nftlab.com/" target="_blank">Blog</a>
+        <a href="https://discord.gg/F6eUuXkB" target="_blank">Join Discord</a>
+    </div>
+    <div class="mobile-topnav-right-container">
+        <a href="javascript:void(0);" class="icon" onclick="mobilenavToggle()">
+            <div></div>
+        </a>
+    </div>
+</div>
+<script>
+    function mobilenavToggle() {
+        var x = document.getElementById("mobile-topnav-links");
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
+    }
+</script>
+
+
+<div class="top-row navbar">
+    <a href="/">
+        <div class="navbar-logobox"></div>
+    </a>
+    <div>
+
+
+    <div class="navlinks">
+        <a href="https://blog.nftlab.com/" class="" target="_blank">Blog</a>
+        <a href="https://discord.gg/F6eUuXkB" target="_blank">Join Discord</a>
+        <a href="/browse" class="">Browse</a>
+        <a href="/search" class="">Search</a>
+    </div>
+
+        <div class="navlinks">
+        </div>
+    </div>
+</div>
+
+
+
+        </div>
+        <div class="main">
+            <div class="content">
+
+
+<div class="container-main">
+    <div class="layoutgrid">
+        <div class="row-header pt-1" style="text-align: center;">The world's first NFT search engine</div>
+        <div class="row-header pb-3" style="text-align: center; font-size: 14px;">Try searching, or explore some cool stuff.</div>
+        <div class="wrapper-searchbox-cell">
+            <div>
+                <div class="hp-textsearch"><input class="hp-textsearch-box" type="text" id="txttextsearch" value="" /><div style="display: none;" class="hp-textsearch-clear-btn"></div><div class="hp-textsearch-btn"></div></div>
+            </div>
+        </div>
+
+        <div class="row-header pt-4">Discover NFT's recently sold</div>
+
+
+                <div class="wrapper-art-cell" onclick="window.location = '/search?sld=lastweek&amp;lpr=veryexpensive&amp;c=USD';">
+                    <div class="header-wrapper">
+                        <div class="sml">Big Buck Sales</div>
+                        <div class="lrg">Sale &gt; $50k in last week</div>
+                    </div>
+                    <div class="tile" style="background-image: url(/images/screenart/small/art_1.jpg)">
+                        <div class="tile-overlay"></div>
+                    </div>
+                </div>
+                <div class="wrapper-art-cell" onclick="window.location = '/search?sld=yesterday&amp;mkp=Foundation&amp;c=USD';">
+                    <div class="header-wrapper">
+                        <div class="sml">Past Day Foundation</div>
+                        <div class="lrg">Sold on Foundation yesterday</div>
+                    </div>
+                    <div class="tile" style="background-image: url(/images/screenart/small/art_2.jpg)">
+                        <div class="tile-overlay"></div>
+                    </div>
+                </div>
+                <div class="wrapper-art-cell" onclick="window.location = '/search?sld=yesterday&amp;c=USD';">
+                    <div class="header-wrapper">
+                        <div class="sml">Recent Sales</div>
+                        <div class="lrg">All sold in past 24 hours</div>
+                    </div>
+                    <div class="tile" style="background-image: url(/images/screenart/small/art_3.jpg)">
+                        <div class="tile-overlay"></div>
+                    </div>
+                </div>
+                <div class="wrapper-art-cell" onclick="window.location = '/search?sld=lastweek&amp;lpr=lowerprice&amp;c=USD';">
+                    <div class="header-wrapper">
+                        <div class="sml">Sold at Reasonable Prices</div>
+                        <div class="lrg">All sold this week $100-$500 </div>
+                    </div>
+                    <div class="tile" style="background-image: url(/images/screenart/small/art_4.jpg)">
+                        <div class="tile-overlay"></div>
+                    </div>
+                </div>
+
+
+        <div class="row-header pt-4">Discover NFT's for sale</div>
+                <div class="wrapper-art-cell" onclick="window.location = '/search?auct=1&amp;c=USD';">
+                    <div class="header-wrapper">
+                        <div class="sml">Auctions Happening Now</div>
+                        <div class="lrg">Active auctions right now</div>
+                    </div>
+                    <div class="tile" style="background-image: url(/images/screenart/small/art_6.jpg)">
+                        <div class="tile-overlay"></div>
+                    </div>
+                </div>
+                <div class="wrapper-art-cell" onclick="window.location = '/search?lpr=expensive&amp;cpr=midtoupper&amp;auct=4&amp;c=USD';">
+                    <div class="header-wrapper">
+                        <div class="sml">Sellers Willing to Lose</div>
+                        <div class="lrg">Sellers willing to take loss</div>
+                    </div>
+                    <div class="tile" style="background-image: url(/images/screenart/small/art_7.jpg)">
+                        <div class="tile-overlay"></div>
+                    </div>
+                </div>
+                <div class="wrapper-art-cell" onclick="window.location = '/search?cpr=lowerprice&amp;auct=4&amp;c=USD';">
+                    <div class="header-wrapper">
+                        <div class="sml">For Sale at Reasonable Prices</div>
+                        <div class="lrg">For sale $100-$500</div>
+                    </div>
+                    <div class="tile" style="background-image: url(/images/screenart/small/art_8.jpg)">
+                        <div class="tile-overlay"></div>
+                    </div>
+                </div>
+                <div class="wrapper-art-cell" onclick="window.location = '/search?lpr=lowerprice&amp;cpr=veryexpensive&amp;auct=4&amp;c=USD';">
+                    <div class="header-wrapper">
+                        <div class="sml">Optimistic Sellers</div>
+                        <div class="lrg">Sellers asking too much</div>
+                    </div>
+                    <div class="tile" style="background-image: url(/images/screenart/small/art_9.jpg)">
+                        <div class="tile-overlay"></div>
+                    </div>
+                </div>
+
+
+        <div class="row-header pt-4">Discover the newest NFT's on the market</div>
+                <div class="wrapper-art-cell" onclick="window.location = '/search?mnt=yesterday&amp;c=USD';">
+                    <div class="header-wrapper">
+                        <div class="sml">Newest NFTs</div>
+                        <div class="lrg">Created in the past day</div>
+                    </div>
+                    <div class="tile" style="background-image: url(/images/screenart/small/art_11.jpg)">
+                        <div class="tile-overlay"></div>
+                    </div>
+                </div>
+                <div class="wrapper-art-cell" onclick="window.location = '/search?mnt=lastweek&amp;mkp=Foundation&amp;auct=4&amp;c=USD';">
+                    <div class="header-wrapper">
+                        <div class="sml">New &amp; for sale on Foundation</div>
+                        <div class="lrg">On Foundation &amp; for sale</div>
+                    </div>
+                    <div class="tile" style="background-image: url(/images/screenart/small/art_12.jpg)">
+                        <div class="tile-overlay"></div>
+                    </div>
+                </div>
+                <div class="wrapper-art-cell" onclick="window.location = '/search?mnt=lastyear&amp;mkp=Foundation&amp;auct=4&amp;c=USD';">
+                    <div class="header-wrapper">
+                        <div class="sml">Stale Listings</div>
+                        <div class="lrg">Created a month ago, no sale</div>
+                    </div>
+                    <div class="tile" style="background-image: url(/images/screenart/small/art_13.jpg)">
+                        <div class="tile-overlay"></div>
+                    </div>
+                </div>
+                <div class="wrapper-art-cell" onclick="window.location = '/search?mnt=yesterday&amp;sld=yesterday&amp;c=USD';">
+                    <div class="header-wrapper">
+                        <div class="sml">Just Created, Already Sold</div>
+                        <div class="lrg">Just created and already sold</div>
+                    </div>
+                    <div class="tile" style="background-image: url(/images/screenart/small/art_14.jpg)">
+                        <div class="tile-overlay"></div>
+                    </div>
+                </div>
+
+    </div>
+</div>
+
+            </div>
+
+    <link rel="stylesheet" href="/css/nft_hp.css?t=v3">
+    <script>
+
+        $(function () {
+            //console.log('Init()');
+            // text search
+            $('#txttextsearch').autocomplete({
+                source: '/api/autocomplete/',
+                minLength: 3,
+                select: function (event, ui) {
+                    $('#txttextsearch').val(ui.item.Keyword);
+                    window.location = '/search?kw=' + $('#txttextsearch').val();
+                }
+            }).autocomplete('instance')._renderItem = function (ul, item) {
+                //console.log('test');
+                return $('<li>')
+                    .append('<div>' + item.Keyword + '</div>')
+                    .attr('data-value', item.Keyword)
+                    .attr('title', 'Click to search for ' + item.Keyword)
+                    //.append(item.Keyword)
+                    .appendTo(ul);
+            };
+            $(document).find('#txttextsearch').keypress(function (event) {
+                if (event.keyCode == 13 || event.which == 13) {
+                    event.preventDefault();
+                    window.location = '/search?kw=' + $('#txttextsearch').val();
+                }
+            });
+            $(document).on('click', '.navsearch-textsearch-btn', function (e) {
+                window.location = '/search?kw=' + $('#txttextsearch').val();
+                $(this).addClass('selected');
+            });
+            //$(document).on('click', '.navsearch-textsearch-clear-btn', function (e) {
+            //    $('#hdnassetpagenumber').val(1);
+            //    runTextSearch('');
+            //    $(this).addClass('selected');
+            //});
+        });
+    </script>
+
+        </div>
+        <div class="footer">
+    &copy;&nbsp;2022&nbsp;Nft&nbsp;Lab
+</div>
+    </div>
+
+
+    <script>
+        window.onUsersnapCXLoad = function (api) {
+            api.init();
+            window.Usersnap = api;
+        }
+        var script = document.createElement('script');
+        script.defer = 1;
+        script.src = 'https://widget.usersnap.com/global/load/bea4ef6b-0902-4f96-b89e-7a7a00900d75?onload=onUsersnapCXLoad';
+        document.getElementsByTagName('head')[0].appendChild(script);
+
+
+    </script>
+
+</body>
+</html>
